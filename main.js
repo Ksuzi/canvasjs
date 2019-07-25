@@ -46,9 +46,9 @@ function clearCanvas(){
   backgroundDiv.style.backgroundColor = "#fff";
   changeBackgroundColor.value = "#ffffff";
   isErase = false;
+  canvas.style.cursor = 'url("https://a.radikal.ru/a13/1907/86/113d58217694.png"), auto';
   lineSizeRange.value = '10';
   lineSizeDisplay.innerHTML = lineSizeRange.value + 'px';
-  canvas.style.cursor = 'url("https://c.radikal.ru/c10/1907/88/5ab7757bf718.png"), auto';
   ctx.lineJoin = 'round';
   ctx.lineCap = 'round';
 }
