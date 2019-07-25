@@ -57,6 +57,7 @@ function draw(e) {
   if (!isDrawing) return; 
   console.log(e);
   ctx.lineWidth = lineSizeRange.value;
+  
   if(isErase){
     ctx.clearRect(e.offsetX, e.offsetY, ctx.lineWidth, ctx.lineWidth);
   }else{
