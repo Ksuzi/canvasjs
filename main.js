@@ -17,6 +17,7 @@ palleteBtn.style.color = changeColor.value;
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight * 0.898;
+canvas.style.cursor = pencilCursor;
 ctx.clearRect( 0, 0, ctx.canvas.width, ctx.canvas.height);
 
 ctx.strokeStyle = '#BADA55';
