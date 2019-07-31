@@ -1,0 +1,70 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  background: #833ab4;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Inconsolata', monospace;
+}
+
+
+.canvas {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.canvas__controls {
+  display: flex;
+  height: 10vh;
+}
+
+.canvas__controls > * {
+  flex: 1;
+}
+
+.canvas__button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background: rgba(0,0,0,0.1);
+  border-bottom: 3px solid rgba(0,0,0,0.2);
+  border-right: 1px solid rgba(0,0,0,0.2);
+  padding: 1rem;
+  font-family: 'Inconsolata', monospace;
+}
+
+.lineSizeDisplay{
+  position: relative;
+  top: -5px;
+}
+
+.canvas__button:hover,
+.canvas__button:focus {
+  background: rgba(0,0,0,0.2);
+  outline: 0;
+}
+
+.display {
+  flex: 1;
+  background: #fff;
+}
+
+#color,
+#backgroundColor{
+  display: none;
+}
