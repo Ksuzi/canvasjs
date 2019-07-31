@@ -1,9 +1,11 @@
 html {
   box-sizing: border-box;
   font-size: 10px;
-  background: #833ab4;
-  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
-  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  background: #833ab4;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+
 }
 
 *, *:before, *:after {
@@ -39,6 +41,7 @@ body {
   color: white;
   font-size: 2rem;
   text-transform: uppercase;
+  outline: none;
   background: rgba(0,0,0,0.1);
   border-bottom: 3px solid rgba(0,0,0,0.2);
   border-right: 1px solid rgba(0,0,0,0.2);
@@ -48,11 +51,27 @@ body {
 
 .lineSizeDisplay{
   position: relative;
-  top: -5px;
+  top: 3px;
+  padding: 0 2px;
 }
 
-.canvas__button:hover,
-.canvas__button:focus {
+#size{
+  height: 2px;
+  background: #fff;
+  -webkit-appearance: none;
+  outline: none;
+  border-radius: 2px;
+}
+
+#size::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  background: #fd1d1d;
+}
+
+.canvas__button:hover {
   background: rgba(0,0,0,0.2);
   outline: 0;
 }
