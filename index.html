@@ -1,30 +1,30 @@
-    
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Countdown Timer</title>
+  <title>Canvas is love</title>
   <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="timer">
-    <div class="timer__controls">
-      <button data-time="20" class="timer__button">20 Secs</button>
-      <button data-time="300" class="timer__button">Work 5</button>
-      <button data-time="900" class="timer__button">Quick 15</button>
-      <button data-time="1200" class="timer__button">Snack 20</button>
-      <button data-time="3600" class="timer__button">Lunch Break</button>
-      <form name="customForm" id="custom">
-        <input type="text" name="minutes" placeholder="Enter Minutes">
-      </form>
-    </div>
-    <div class="display">
-      <h1 class="display__time-left"></h1>
-      <p class="display__end-time"></p>
-    </div>
-  </div>
 
-  <script src="scripts.js"></script>
+    <div class="canvas">
+      <div class="canvas__controls">
+        <button class="canvas__button"><span class="lineSizeDisplay">10</span><input id="size" type="range" name="size" min="10" max="50" value="5"></button>
+        <button data-action="color()" class="canvas__button"><i class="fas fa-palette fa-2x lineColor"></i></button>
+        <input id="color" type="color" name="base" value="#ffc600">
+        <button data-action="eraser()" class="canvas__button"><i class="fa fa-eraser fa-2x"></i></button>
+        <button data-action="pencil()" class="canvas__button"><i class="fas fa-pencil-alt fa-2x"></i></button>
+        <button data-action="clear()" class="canvas__button"><i class="fas fa-times fa-2x"></i></button>
+        <button data-action="backgroundColor()" class="canvas__button"><i class="fas fa-fill-drip fa-2x"></i></button>
+        <input id="backgroundColor" type="color" name="base" value="#ffffff">
+      </div>
+      <div class="display">
+        <canvas id="draw"></canvas>
+      </div>
+    </div>
+      
+  <script src="main.js"></script>
 </body>
 </html>
